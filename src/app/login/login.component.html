@@ -1,0 +1,15 @@
+<div class="wrapper">
+  <form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your login</mat-label>
+      <input matInput formControlName="login" required>
+      <mat-error *ngIf="loginForm.controls.login.invalid && loginForm.controls.login.touched">{{getErrorMessage(loginForm.controls.login)}}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your password</mat-label>
+      <input matInput formControlName="password" required>
+      <mat-error *ngIf="loginForm.controls.password.invalid && loginForm.controls.password.touched">{{getErrorMessage(loginForm.controls.password)}}</mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" class="form__btn" [disabled]="!loginForm.valid">Login</button>
+  </form>
+</div>

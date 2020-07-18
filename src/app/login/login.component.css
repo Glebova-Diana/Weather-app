@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  min-width: 300px;
+  margin: 0 auto 0;
+  padding-top: 200px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.form__btn {
+  display: block;
+  width: 80%;
+  height: 45px;
+  margin: 0 auto;
+}
