@@ -14,7 +14,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatCardModule} from '@angular/material/card';
 import { MainPageComponent } from './main-page/main-page.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
-import {RouterModule} from '@angular/router';
+import {CdkTableModule} from '@angular/cdk/table';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {RouterModule} from '@angular/router';
     MatCardModule,
     MatDialogModule,
     AppRoutingModule,
-    // RouterModule.forRoot(routes)
+    CdkTableModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
