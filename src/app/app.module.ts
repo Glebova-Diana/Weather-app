@@ -16,6 +16,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import {CdkTableModule} from '@angular/cdk/table';
 import {MatTableModule} from '@angular/material/table';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import {MatTableModule} from '@angular/material/table';
     MatDialogModule,
     AppRoutingModule,
     CdkTableModule,
-    MatTableModule
+    MatTableModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

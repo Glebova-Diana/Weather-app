@@ -11,14 +11,15 @@ export class WeatherService {
   protected readonly url = environment.weatherApiUrl;
   protected readonly apiKey = '82ec1a499983007dd0e53a561d615bde';
   private weather;
+  public cityName;
 
   constructor(private http: HttpClient) { }
 
   public getWeather(): Observable<any> {
-    console.log('url', `${this.url}?q=Kharkiv&appid=${this.apiKey}`);
     return this.http.get(`${this.url}?q=Kharkiv&appid=${this.apiKey}`).pipe(
       tap((data) => {
         this.weatherList = data.list;
+        this.cityName = data.city.name;
       })
     ) as Observable<any>;
   }

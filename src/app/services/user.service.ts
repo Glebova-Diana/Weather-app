@@ -5,10 +5,18 @@ import { Injectable } from '@angular/core';
 })
 export class UserService {
 
-  loginUser = {
-    login: 'Princess Diana',
+  private loginUser = {
+    login: 'Test user',
     password: 'qwerty'
   };
 
   constructor() { }
+
+  set userLogin(user) {
+    this.loginUser = user;
+  }
+
+  get userLogin() {
+    return this.loginUser;
+  }
 }

@@ -39,15 +39,9 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.router, 'this.router');
-    console.log(this.loginForm.controls.login.value, 'this.loginForm.controls.login.value');
-    console.log(this.userService.loginUser.login, 'this.userService.loginUser.login');
-    console.log(this.loginForm.controls.password.value, 'this.loginForm.controls.pass.value');
-    console.log(this.userService.loginUser.password, 'this.userService.loginUser.pass');
-    if (this.loginForm.controls.login.value === this.userService.loginUser.login &&
-      this.loginForm.controls.password.value === this.userService.loginUser.password) {
+    if (this.loginForm.controls.login.value === this.userService.userLogin.login &&
+      this.loginForm.controls.password.value === this.userService.userLogin.password) {
       this.router.navigateByUrl('/main-page');
-      console.log('login and pass the same!');
     }
   }
 }
