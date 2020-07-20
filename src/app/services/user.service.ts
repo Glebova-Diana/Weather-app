@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class UserService {
 
   private loginUser = {
-    login: 'Test user',
+    login: 'Tester',
     password: 'qwerty'
   };
 
